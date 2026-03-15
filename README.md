@@ -19,7 +19,6 @@ Una solución completa de tienda online desarrollada para **Inferno Colombia** �
 - [Descripción](#-descripción)
 - [Características](#-características)
 - [Tecnologías](#-tecnologías)
-- [Estructura del proyecto](#-estructura-del-proyecto)
 - [Instalación y ejecución](#-instalación-y-ejecución)
 - [API REST](#-api-rest)
 - [Autor](#-autor)
