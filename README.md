@@ -39,59 +39,7 @@ Una solución completa de tienda online desarrollada para **Inferno Colombia** �
 
 ## 🧩 Diagrama de componentes
 
-```mermaid
-flowchart TB
-    subgraph Client["Cliente"]
-        Browser[Navegador]
-        API_Client[Cliente API / Postman]
-    end
 
-    subgraph Server["Servidor FastAPI (Uvicorn)"]
-        subgraph App["app"]
-            Main["main.py\n(FastAPI, SessionMiddleware,\nrutas web, estáticos)"]
-            API["api_products.py\n(Router /productos)"]
-            Main --> API
-        end
-        
-        subgraph Core["Núcleo"]
-            Settings["settings.py\n(Config .env)"]
-            DB["db.py\n(Engine, SessionLocal, get_db)"]
-            Models["models.py\n(ORM: Product, Customer,\nCart, Order, Category, Slider)"]
-            Utils["utils.py\n(sesión, carrito, contexto)"]
-        end
-        
-        Main --> Settings
-        Main --> DB
-        Main --> Utils
-        API --> DB
-        DB --> Models
-        Utils --> DB
-    end
-
-    subgraph Static["Assets (raíz repo)"]
-        CSS["/css"]
-        JS["/js"]
-        IMG["/img"]
-        Fonts["/fonts"]
-    end
-
-    subgraph Data["Datos"]
-        MySQL[(MySQL\nthreaderz_store)]
-    end
-
-    subgraph Templates["Plantillas"]
-        Jinja["app/templates/\n(Jinja2)"]
-    end
-
-    Browser --> Main
-    API_Client --> API
-    Main --> Jinja
-    Main --> Static
-    DB --> MySQL
-    
-*(Si tu GitHub no renderiza Mermaid en el README, puedes pegar el mismo código en [mermaid.live](https://mermaid.live) y subir la imagen al repo y poner aquí `![Diagrama](ruta/a/diagrama.png)`.)*
-
----
 
 ## 📄 Descripción
 
