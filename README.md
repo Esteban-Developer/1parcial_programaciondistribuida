@@ -27,7 +27,7 @@ Una solución completa de tienda online desarrollada para **Inferno Colombia** �
 
 ---
 
-## 📐 Documento de arquitectura
+##  Documento de arquitectura
 
 - **Backend:** Python 3.10+ con FastAPI (ASGI con Uvicorn).
 - **Base de datos:** MySQL (ej. XAMPP), base de datos `threaderz_store`. Conexión vía **SQLAlchemy** + **PyMySQL**; configuración por variables de entorno (`.env`): `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`.
@@ -37,17 +37,17 @@ Una solución completa de tienda online desarrollada para **Inferno Colombia** �
 
 ---
 
-## 🧩 Diagrama de componentes
+##  Diagrama de componentes
 
 ![Arquitectura del sistema](arquitectura.png)
 
-## 📄 Descripción
+##  Descripción
 
 Proyecto de **e-commerce** para Inferno Colombia: catálogo de productos por categorías (Hombres, Mujeres, Niños), carrito de compras, checkout, registro e inicio de sesión, cuenta de usuario (pedidos y datos), página de contacto y panel de administración para insertar productos. Incluye una **API REST** para el catálogo (`POST/GET /productos`, `GET /productos/{id}`). La aplicación está implementada en **Python con FastAPI** y utiliza la misma base de datos MySQL que la versión original en PHP.
 
 ---
 
-## ✨ Características
+##  Características
 
 - Inicio con slider y productos destacados (hombres/mujeres).
 - Tienda con filtros por categoría y paginación.
@@ -64,7 +64,7 @@ Proyecto de **e-commerce** para Inferno Colombia: catálogo de productos por cat
 
 ---
 
-## 🛠 Tecnologías
+##  Tecnologías
 
 | Área        | Tecnología        |
 |------------|-------------------|
@@ -81,28 +81,51 @@ Proyecto de **e-commerce** para Inferno Colombia: catálogo de productos por cat
 
 ---
 
-## 🚀 Instalación y ejecución
+##  Instalación y ejecución
 
 1. Clonar el repositorio y tener **MySQL** (ej. XAMPP) con la BD creada e importada desde `store.sql`.
 2. En `fastapi_app/` crear `.env` (copiar `.env.example`) y configurar `DB_*` y opcionalmente `APP_SECRET_KEY`, `SMTP_*`.
 3. Crear entorno virtual, instalar dependencias y ejecutar:
 
-```bash
+
 cd fastapi_app
+
+
 python -m venv .venv
+
+
 .venv\Scripts\activate    # Windows
+
+
 pip install -r requirements.txt
+
+
 pip install itsdangerous
+
+
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 
+
+
 ## Abrir en el navegador: http://127.0.0.1:8000/.
-📡 API REST
+
+
+ API REST
 Método	Ruta	Descripción
+
+
 POST	/productos	Crear producto (JSON)
+
+
 GET	/productos	Listar todos los productos
+
+
 GET	/productos/{id}	Detalle de un producto
+
+
 Documentación interactiva: http://127.0.0.1:8000/docs.
 
 ## 👤 Autor
 
 Esteban Murillo — Proyecto Inferno Colombia
+Miguel Villamil
