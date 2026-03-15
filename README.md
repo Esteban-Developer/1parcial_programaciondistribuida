@@ -39,7 +39,7 @@ Una solución completa de tienda online desarrollada para **Inferno Colombia** �
 
 ## 🧩 Diagrama de componentes
 
-`![Diagrama](arquitectura.png)`
+![Arquitectura del sistema](arquitectura.png)
 
 ## 📄 Descripción
 
